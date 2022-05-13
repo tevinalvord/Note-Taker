@@ -7,11 +7,11 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 // parse incoming JSON data
 app.use(express.json());
-// instruct server to make certain files redily available and to not gate it behind server endpoint
+// instruct server to make ceertain files redily available and to not gate it behind a server endpoint
 app.use(express.static('public'));
 app.use('/api', apiRoutes);
 app.use('/', htmlRoutes);
 
 app.listen(PORT, () => {
-    console.log(`API server now on port ${PORT}`);
+    console.log(`API server now on port ${PORT}!`);
 });
